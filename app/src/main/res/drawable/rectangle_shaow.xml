@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+如果要漸層將solid改成以下
+<gradient
+    android:startColor="@color/colorPrimary"
+    android:endColor="@color/colorAccent"
+    android:angle="90"/>
+
+-->
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--陰影部分-->
+    <!--設置陰影左邊跟上面的offset-->
+    <!--  代表圖片往上跟左移動,右下就會多3dp 的陰影  -->
+    <item
+        android:left="3dp"
+        android:top="3dp">
+        <shape
+            android:shape="rectangle">
+            <!--設定陰影顏色-->
+            <solid
+                android:color="#ff00ff" />
+            <!--設定圓角的尺寸-->
+            <corners
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="15dp"/>
+        </shape>
+    </item>
+    <!--物件部分-->
+    <!--設置物件右邊跟下面的offset-->
+    <!-- 設置陰影處在右邊跟下面   -->
+    <item
+        android:bottom="3dp"
+        android:right="3dp">
+        <shape
+            android:shape="rectangle">
+            <!--設定形狀的顏色-->
+            <solid
+                android:color="@color/colorPrimary"/>
+            <!--設定圓角的尺寸-->
+            <corners
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="15dp"
+                />
+            <!--設定邊框-->
+            <stroke
+                android:width="2dp"
+                android:color="@color/colorPrimaryDark"/>
+            <!--設定內容與邊界的距離-->
+            <padding
+                android:top="15dp"
+                android:right="15dp"
+                android:bottom="15dp"
+                android:left="15dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+1.在shape標籤外再加上rotate標籤
+2，在style.xml裡加上style樣式
+3,在activity_main.xml裡加上progressBar標籤
+rotate屬性：
+    android:fromDegrees：開始旋轉的角度位置
+    android:toDegrees：結束時轉到的角度位置
+    android:pivotX：旋轉起點的X軸座標位置，可以是數值、百分比、百分比p
+    android:pivotY：旋轉起點的Y軸座標位置，可以是數值、百分比、百分比p
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="1080.0">
+            <!--設定形狀的半徑、厚度-->
+            <shape
+                android:shape="ring"
+                android:innerRadius="30dp"
+                android:thickness="10dp"
+                android:useLevel="false">
+                <!--設定形狀的漸層-->
+                <gradient
+                    android:startColor="@color/colorPrimary"
+                    android:endColor="@color/colorAccent"
+                    android:type="sweep"/>
+                <!--設定邊框-->
+                <stroke
+                    android:width="1dp"
+                    android:color="@color/colorAccent"/>
+            </shape>
+        </rotate>
+    </item>
+</selector>

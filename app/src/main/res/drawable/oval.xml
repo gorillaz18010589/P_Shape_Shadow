@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+oval和ring的漸層有三種類型（android:type）：linear（線性）、radial（放射性）、sweep（掃描）
+
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="oval">
+            <!--設定形狀的顏色-->
+<!--            <gradient-->
+<!--                android:startColor="@color/colorPrimary"-->
+<!--                android:endColor="@color/colorAccent"-->
+<!--                android:gradientRadius="70dp"-->
+<!--                android:type="radial" />-->
+            <solid
+                android:color="@color/colorPrimary"/>
+            <!--設定形狀尺寸-->
+            <size
+                android:width="70dp"
+                android:height="70dp"/>
+            <!--設定邊框-->
+            <stroke
+                android:width="2dp"
+                android:color="@color/colorPrimaryDark"/>
+            <!--設定內容與邊界的距離-->
+            <padding
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp"
+                android:left="10dp"/>
+        </shape>
+    </item>
+</selector>
